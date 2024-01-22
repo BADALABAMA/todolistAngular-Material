@@ -14,7 +14,13 @@ import { ITodos, Status } from '../todos/ITodos';
 })
 export class TodoListTableComponent implements AfterViewInit {
   todoList: ITodos[] = this.todoListService.getTodoList();
-  displayedColumns: string[] = ['position', 'description', 'status', 'date'];
+  displayedColumns: string[] = [
+    'position',
+    'description',
+    'status',
+    'date',
+    'btns',
+  ];
   dataSource = new MatTableDataSource<ITodos>(this.todoList);
   descriptionInput: string = '';
   editedTodo: string = '';

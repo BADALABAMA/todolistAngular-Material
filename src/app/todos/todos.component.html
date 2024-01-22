@@ -1,4 +1,8 @@
 <!-- <div *ngFor="let todo of todoList">
+  <div>{{ todo.date | date : "dd.MM HH:mm" }}</div>
+  <div>{{ todo.id }}</div>
+  <div>{{ todo.description }}</div>
+  <div>{{ todo.status }}</div>
   <button (click)="deleteTodo(todo.id)">delete</button>
   <button (click)="editToDo(todo.id, descriptionInput, status)">
     Edit Todo
