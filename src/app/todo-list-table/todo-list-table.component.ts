@@ -34,7 +34,7 @@ export class TodoListTableComponent implements AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   ngAfterViewInit() {
-    this.dataSource.data = this.todoList;
+    this.dataSource.sort = this.sort;
   }
 
   announceSortChange(sortState: Sort) {
